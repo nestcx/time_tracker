@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --main-bg-colour: #3b3b3b;
+    --default-font-colour: #eeeeee;
+    --ui-bg-colour: #2d2d2d;
+    --timer-bg-colour: #464b5d;
+    --btn-bg-colour:#464b5d;
+    --btn-font-colour: #dddddd;
+    --btn-hover-bg-colour: #404250;
+    --btn-hover-font-colour: #929292; 
+    --btn-disabled-bg-colour: #808080;
+    --btn-disabled-font-colour: #d4d4d4;
+    --debug-outline: rgb(236, 231, 231, 0);
+}
+
+html, *, body {
+    font-size: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--default-font-colour);
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--main-bg-colour);
+}
+
+
+
+.timer_wrapper {
+    margin: 5rem auto;
+    width: 300px;
+    display: flex;
+
+    border: 1px solid var(--debug-outline);
+    display: flex;
+    flex-direction: column;
+}
+
+.timer_display {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--timer-bg-colour);
+
+    font-size: 4rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+
+    border: 1px solid var(--debug-outline);
+}
+
+
+
+.ui_wrapper {
+    background-color: var(--ui-bg-colour);
+    display: flex;
+    column-gap: 1.25rem;
+    box-sizing: border-box;
+    padding: 1.25rem;
+
+    border: 1px solid var(--debug-outline);
+}
+
+.ui_wrapper > div {
+    user-select: none;
+    font-size: 1.6rem;
+    background-color: var(--btn-bg-colour);
+    color: var(--btn-font-colour);
+    border-radius: 0.3rem;
+    text-align: center;
+    flex:1;
+    padding: 1.5rem 0 1rem 0;
+}
+
+.ui_wrapper > div > img {
+    width: 20px;
+}
+
+.ui_wrapper > div:hover {
+    cursor: pointer;
+    background-color: var(--btn-hover-bg-colour);
+    color: var(--btn-hover-font-colour);
+}
+
+.disabled {
+    background-color: var(--btn-disabled-bg-colour) !important;
+    color: var(--btn-disabled-font-colour) !important;
+}
